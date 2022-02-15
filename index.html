@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/d540835d5d.js" crossorigin="anonymous"></script>
+	<title>Chat App</title>
+	<style >
+		
+		.chat-app{
+			display: flex;
+			flex-flow: row nowrap;
+		}
+		.chat-area{
+			width: 100%;
+			height: 500px;
+			background-image: url('images/background-chat.png');
+			background-size:100% ;
+			overflow: scroll;
+		}
+		.left-part{
+			width: 40%;
+			height: 95vh;
+		}
+
+		.right-part{
+			width: 60%;
+			height: 95vh;
+		}
+		.right-header{
+			height: 50px;
+			width:100%;
+		}
+		.left-header{
+			height: 50px;
+
+		}
+		.chat-area ul{
+			list-style: none;
+		}
+		.chat-area ul li{
+			display: flex;
+			flex-flow: column nowrap;
+			margin-bottom: 50px;
+			padding: 12px;
+			width: 45%;
+			border-radius: 8% 4%;
+
+		}
+		.chat-area ul .from{
+			background-color: gray;
+		}
+		.chat-area ul .to{
+			margin-left:47%;
+			background-color: lightcoral;
+		}
+		.chat-area ul li .time-tik{
+			margin-left: 60px;
+		}
+		.chat-area ul .to i{
+			margin-left: 20px;
+			color:blue;
+			font-size:12;
+		}
+		.footer{
+			background-color: lightseagreen ; 
+		}
+		.footer input{
+			width: 70%;
+			height: 30px;
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+		img{
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+		}
+		.chats-list-area{
+			height: 500px;
+			overflow: scroll;
+			margin-top: 20px;
+		}
+		.chats-list-area ul {
+			list-style: none;
+		}
+		.chats-list-area ul li{
+			object-fit: cover;
+		}
+		.search {
+			margin-left: 20px;
+		}
+		.search input {
+			height: 20px;
+			width:70%;
+
+		}
+		.header{
+			background-color: lightseagreen ; 
+
+		}
+		
+		.header ul{
+			display: flex;
+			flex-flow: row nowrap;
+			list-style:none;
+			justify-content: space-between;
+			margin-right: 20%;
+			margin-left: 20%;
+		}
+		#active{
+			background-color: lightseagreen ; 
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="chat-app">
+		<div class="left-part">
+			<div class="header left-header">
+				<ul>
+					<li><i class="fas fa-user"></i></li>
+					<li><i class="fas fa-comment"></i></li>
+				</ul>
+				<div class="search">
+					<input type="text" name="">
+					<i class="fas fa-search"></i>
+				</div>
+			</div>
+			<div class="chats-list-area">
+			<ul>
+				<li id="active"><img src="images/wd.jpeg"><span>TGB</span></li>
+				<li><img src="images/bison.jpg"><span>Andrey</span></li>
+				<li><img src="images/buffalo.jpg"><span>Antony</span></li>
+				<li><img src="images/Cat1.jpg"><span>Sofia</span></li>
+				<li><img src="images/cat2.jpeg"><span>Polienko</span></li>
+				<li><img src="images/cat3.jpg"><span>Kate</span></li>
+				<li><img src="images/kudu1.jpg"><span>Nastya</span></li>
+				<li><img src="images/kudu2.jpg"><span>Masha</span></li>
+				<li><img src="images/lion.jpg"><span>Tukunov</span></li>
+				<li><img src="images/wathog1.jpg"><span>leoteva</span></li>
+				<li><img src="images/warthog2.jpg"><span>Artem</span></li>
+				<li><img src="images/zebra1.jpg"><span>Alexei</span></li>
+				<li><img src="images/zebra2.jpg"><span>Liza</span></li>
+			</ul>
+			</div>
+		</div>
+		<div class="right-part">
+			<div class="header right-header">
+				<ul>
+					<li><i class="fas fa-user"><span>TGB</span></i></li>
+				<li><i class="fas fa-comment"></i></li>
+				</ul>
+			</div>
+			<div class="chat-area">
+				<ul>
+					<li class="from"><span class="msg">Привет </span> <span class="time-tik">7:17pm </span></li>
+					<li class="from"><span class="msg"> Как Дела</span> <span class="time-tik">7:17pm </span></li>
+					<li class="to"><span class="msg"> Все нормально<i class="fas fa-check-double"></i></span> <span class="time-tik">7:17pm </span></li>
+					<li class="to"><span class="msg"> Как учеба там<i class="fas fa-check-double"></i></span> <span class="time-tik">7:17pm </span></li>
+					<li class="to"><span class="msg"> У вас занят.. очная или дистанц.....<i class="fas fa-check-double"></i></span> <span class="time-tik">7:17pm </span></li>
+					<li class="from"><span class="msg"> Все пойдет братан </span> <span class="time-tik">7:17pm </span></li>
+					<li class="from"><span class="msg"> У нас пока дистанц... </span> <span class="time-tik">7:17pm </span></li>
+					<li class="from"><span class="msg"> Сейчас я изучаю Javascript  </span> <span class="time-tik">7:17pm </span></li>
+					<li class="from"><span class="msg"> Я хочу работать в сфере фронденд разрабочик</span> <span class="time-tik">7:17pm </span></li>
+					<li class="to"><span class="msg"> Это очень хорошо молодец....<i class="fas fa-check-double"></i></span> <span class="time-tik">7:17pm </span></li>
+
+
+				</ul>
+			
+			</div>
+			<div class="footer">
+			<i class="fas fa-arrow-circle-up"></i>
+			<input type="text" name="">
+			<i class="fas fa-paper-plane"></i>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
